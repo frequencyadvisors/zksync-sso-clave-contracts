@@ -308,7 +308,7 @@ export const create2 = async (contractName: string, wallet: Wallet, salt: ethers
   const standardCreate2Address = utils.create2Address(wallet.address, bytecodeHash, salt, args ? constructorArgs : "0x");
   const accountCode = await wallet.provider.getCode(standardCreate2Address);
   if (accountCode != "0x") {
-    logInfo(`Contract ${contractName} already exists!`);
+    logInfo(`Contract ${contractName} already exists at ${standardCreate2Address}!`);
     return new ethers.Contract(standardCreate2Address, contractArtifact.abi, wallet);
   }
 
