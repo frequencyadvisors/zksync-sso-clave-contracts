@@ -38,12 +38,19 @@ import {
   WebAuthValidator__factory,
   ERC1271Caller__factory } from "../typechain-types";
 
+// export const ethersStaticSalt = new Uint8Array([
+//   205, 241, 161, 186, 101, 105, 79,
+//   248, 98, 64, 50, 124, 168, 204,
+//   200, 71, 214, 169, 195, 118, 199,
+//   62, 140, 111, 128, 47, 32, 21,
+//   177, 177, 174, 166,
+// ]);
 export const ethersStaticSalt = new Uint8Array([
   205, 241, 161, 186, 101, 105, 79,
   248, 98, 64, 50, 124, 168, 204,
   200, 71, 214, 169, 195, 118, 199,
   62, 140, 111, 128, 47, 32, 21,
-  177, 177, 174, 166,
+  177, 177, 174, 162,
 ]);
 
 export class ContractFixtures {

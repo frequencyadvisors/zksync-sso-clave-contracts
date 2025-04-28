@@ -80,7 +80,8 @@ contract AAFactory {
     bytes[] memory initialValidators,
     address[] calldata initialK1Owners
   ) public returns (address accountAddress) {
-    bytes32 uniqueAccountId = keccak256(abi.encodePacked(uniqueId, msg.sender));
+    //bytes32 uniqueAccountId = keccak256(abi.encodePacked(uniqueId, msg.sender));
+    bytes32 uniqueAccountId = uniqueId;
     address existingAccountAddress = accountMappings[uniqueAccountId];
     if (existingAccountAddress != address(0)) {
       revert Errors.ACCOUNT_ALREADY_EXISTS(existingAccountAddress);
